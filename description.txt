@@ -1,0 +1,109 @@
+
+## 📌 **Project Title:**
+
+**Automated Instagram Interest-Based Follower Bot Using Python & Selenium**
+
+---
+
+## 🧠 **Abstract:**
+
+This project is a Python-based automation tool that interacts with the Instagram web interface using the Selenium framework. It is designed to automatically log in to a user's Instagram account, search for accounts or pages based on predefined interests (e.g., technology, sports, etc.), and then auto-follow members or followers of those accounts. This helps grow the user’s network by targeting profiles with similar interests — saving time and manual effort.
+
+---
+
+## 🎯 **Objective:**
+
+To build a browser automation bot that:
+
+* Logs into Instagram using user credentials
+* Searches for pages or accounts matching a keyword or interest
+* Opens the follower list of a selected result
+* Scrolls through the follower list and follows multiple accounts
+
+---
+
+## 🔧 **Technology Stack:**
+
+| Component            | Tool                            |
+| -------------------- | ------------------------------- |
+| Programming Language | Python 3.x                      |
+| Automation Framework | Selenium WebDriver              |
+| Web Parsing          | BeautifulSoup (partially)       |
+| Browser Driver       | ChromeDriver                    |
+| Target Platform      | Instagram Web                   |
+| Optional             | Requests (for future extension) |
+
+---
+
+## 🔑 **Core Functionalities:**
+
+### 1. **Automated Login**
+
+* Launches Chrome browser via Selenium.
+* Navigates to Instagram's login page.
+* Enters email/username and password.
+* Clicks the "Login" button.
+
+> Used selectors: `input[type='text']`, `input[type='password']`, and `button[type='submit']`.
+
+---
+
+### 2. **Interest-Based Search**
+
+* After login, waits for Instagram to load.
+* Opens the **Search** functionality.
+* Inputs a keyword (e.g., `"technology"`) into the search field.
+* Clicks on the first matching result (page or account).
+
+> Purpose: To access pages aligned with the user’s interests.
+
+---
+
+### 3. **Auto-Follow Feature**
+
+* Clicks on the "Followers" button of the selected account.
+* Scrolls through the followers list (automated scrolling to load more).
+* Detects users not followed yet.
+* Clicks the **"Follow"** button for each.
+
+> The loop is limited (e.g., first 10 scroll loads) to avoid detection or rate-limiting by Instagram.
+
+---
+
+## 🗃️ **File Breakdown:**
+
+| File               | Description                                       |
+| ------------------ | ------------------------------------------------- |
+| `main.py`          | Core bot logic including login, search, follow    |
+| `chromedriver.exe` | WebDriver executable to control Chrome            |
+| `requirements.txt` | Python packages needed (Selenium, requests, etc.) |
+
+---
+
+## 🧪 **Testing & Safety**
+
+* Includes appropriate `time.sleep()` delays to avoid triggering Instagram's bot detection.
+* Carefully designed DOM selectors to match dynamic elements.
+* Only interacts with visible buttons and elements (ethical automation).
+
+> Note: Instagram has aggressive bot-detection systems. Use this tool responsibly and for educational purposes.
+
+---
+
+## 📌 **Limitations:**
+
+* May break if Instagram updates its HTML structure (DOM changes).
+* ChromeDriver version must match the installed Chrome version.
+* Hardcoded credentials (in the sample) should be secured using `.env` or config files.
+* The bot doesn't handle captcha or 2FA (two-factor authentication).
+
+---
+
+## 📚 **Conclusion:**
+
+This project demonstrates a strong understanding of browser automation using Selenium,
+  web interaction through dynamic selectors, and practical use of Python for real-world
+  applications. It automates tedious tasks like login, search, and following users on
+    Instagram based on interests — showcasing how AI/ML students can blend automation
+    with social media intelligence.
+
