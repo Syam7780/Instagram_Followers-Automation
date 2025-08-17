@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 
 
-path = "D:\programs\chromedriver-win64\chromedriver.exe"
+path = "D:\programs\chromedriver-win64\chromedriver.exe" #give the chrome drive path in my case it is in this path 
 
 class LoginInsta:
     def __init__(self):
@@ -56,6 +56,7 @@ class LoginInsta:
         print(users)
         time.sleep(20)
 
-o = LoginInsta()
-o.find_common_interest()
-o.follow_members()
+objet = LoginInsta()
+object.find_common_interest()
+
+object.follow_members()
